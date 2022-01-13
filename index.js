@@ -49,7 +49,7 @@ Use the copy function below to do the following:
 function copy(array){
  //we need to return a copy of the original array
  return [...array];
- //this will take a copy of the array
+ //using brackets followed by three periods creates a copy of the array. this will take a copy of the array
 }    
 
 console.log('task 1', copy(originalFlavors));
@@ -66,8 +66,9 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-// we need one parameter
+// we need one parameter = array
 function is31Flavors(array){
+  //we need to check how many flavors are in the array.
   if(array.length === 31){
     return true;
   } else{
@@ -90,10 +91,11 @@ Use the addFlavor function below to do the following:
 */
 
 // we need to create 2 parameters arrays and flavor
-function addFlavor(/*your code here*/){
- /*your code here*/
- //use unshift to add the flavour 
- //return the array
+function addFlavor(array, newFlavor){
+ //use unshift to add the flavour
+ array.unshift(newFlavor);
+ // we then need to return the array
+ return array;
 }
 
 
@@ -109,10 +111,12 @@ Use the removeLastFlavor function below to do the following:
 */
 
 //we receive one parameter
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(array){
  //we use pop to remove the last item
+ array.pop();
  //then we want to return the array.
- //remember that pop does not take an arguement
+ return array;
+ //remember that pop does not take an argument
 }
 
 
@@ -121,7 +125,7 @@ function removeLastFlavor(/*your code here*/){
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-  1. Recieve an array
+  1. Receive an array
   2. Receive a number (the desired index)
   3. Return the flavor located at the received index position
 
@@ -129,8 +133,12 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 //we want to receive an array and index so 2 parameters
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(array, index){
   //for example if I passed in original flavors and 2, I would want to return originalFlavours[2];
+  for(let i = 0; i < array.length; i++){
+   //I need to figure out how to get the string at that index.
+      return array[index];
+  }
   //what would the return statement look like? return array[index]
 }
 
@@ -152,12 +160,17 @@ Use the removeFlavorByName function below to do the following:
 
 
 // we are taking two parameters here. 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, flavour){
   //we need some strict equality here
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === flavour){
+      array.splice(i, 1);
+    }
+  }
   //write a conditional that checks to see if the index matches the given flavor
   //if it does, remove it
   //outside of the loop we want to return the array.
+  return array;
 }
 
 
@@ -183,12 +196,18 @@ Use the filterByWord function below to do the following:
 */
 
 //2 parameters array, string
-function filterByWord(/*your code here*/){
+function filterByWord(array, keyWord){
   // I would want to create a new array called filtered array to push my values to
+  const filteredArray = [];
   //then i would want to loop through the original array and check each item
   //if the item includes the string, i want to push it to that filtered array.
-
+  for(let i = 0; i < array.length; i++){
+    if(array[i].includes(keyWord)){
+      filteredArray.push(array[i]);
+    }
+  }
   //outside of the for loop i want to return the filtered array.
+  return filteredArray;
 }
 
 
