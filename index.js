@@ -225,8 +225,51 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+/* 👀 This is your data for stretch 1⬇ */
+const originalFlavors = [
+  "Banana Nut Fudge",
+  "Black Walnut",
+  "Burgundy Cherry",
+  "Butterscotch Ribbon",
+  "Cherry Macaron",
+  "Chocolate",
+  "Chocolate Almond",
+  "Chocolate Chip",
+  "Chocolate Fudge",
+  "Chocolate Mint",
+  "Chocolate Ribbon",
+  "Coffee",
+  "Coffee Candy",
+  "Date Nut",
+  "Eggnog",
+  "French Vanilla",
+  "Green Mint Stick",
+  "Lemon Crisp",
+  "Lemon Custard",
+  "Lemon Sherbet",
+  "Maple Nut",
+  "Orange Sherbet",
+  "Peach",
+  "Peppermint Fudge Ribbon",
+  "Peppermint Stick",
+  "Pineapple Sherbet",
+  "Raspberry Sherbet",
+  "Rocky Road",
+  "Strawberry",
+  "Vanilla",
+  "Vanilla Burnt Almond"
+]
+
+function getAverageWordLength(array){
+  function WordCounter (str) {
+    var words = str.split(" ").length;
+    return words;
+  }
+  for(let i = 0; i < array.length;i++){
+// I need to figure out how many words per array item there are
+//then i need to figure out how to average all those results and return that value.
+
+  }
 }
 
 
